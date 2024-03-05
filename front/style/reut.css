@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.contenedor{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.texto-mont{
+    font-family: "montserrat", cursive;
+    font-weight: 400;
+}
+
+.texto-kono{
+    font-family: "kode-mono";
+    font-weight: 400;
+}
+.modo-flexbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modo-grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}

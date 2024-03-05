@@ -3,10 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/front/style/style.css">
+    <link rel="stylesheet" href="/front/style/reut.css">
+    <link rel="stylesheet" href="/front/style/normalize.css">
+    <title>•MovieStar•</title>
   </head>
   <body>
-    <h1>Proyecto de M2</h1>
+    <header>
+      <div class="contenedor">
+        <h1 class="texto-mont">♦ MovieStar ♣</h1>
+        <div class="contenedor navegador-principal modo-flexbox ">
+          <nav class="navegador texto-kono">
+            <a class="inicio" href="/front/index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                <path d="M10 12h4v4h-4z" />
+                </svg>
+            </a>
+            <a href="/front/pages/cine.html">Historia</a>
+            <a href="/front/pages/web.html">Web</a>
+            <a id="#contacto" href="#">Contacto</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="contenedor bgr-cover">
+      <div class="contenedor texto-mont">
+        <h1>Bienvenido a Pelis <br>MovieStar</h1>
+        <p>Todas las recomendaciones & Informacion que necesites de las mejores peliculas de todos los años</p>
+      </div>
+    </div>
+
+    
+    <section class="contenedor">
+      <div class="contenido-card">
+        <div class="card text-center mb-3" style="width: 18rem;">
+          <div class="card-body">
+            <img class="img-star" src="/front/img/Cards/Blade Runner 2049 - 2.jpg" alt="">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+        <div class="card text-center mb-3" style="width: 18rem;">
+          <div class="card-body">
+            <img class="img-star" src="/front/img/Cards/Hereditary 2.jpg" alt="">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card text-center mb-3" style="width: 18rem;">
+          <div class="card-body">
+            <img class="img-star" src="/front/img/Cards/Intelestellar 1.jpg" alt="">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card text-center mb-3" style="width: 18rem;">
+          <div class="card-body">
+            <img class="img-star" src="/front/img/Cards/Pacific Rim.jpg" alt="">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+
+    <section class="contenedor">
+    </section>
+
+    <footer class="footer">
+      <div class="contenedor contenido-footer">
+          <div class="contenedor contenedor-footer">
+              <h1>Pelis ♦MovieStar♣</h1>
+              <p>Freelancer FullStack Activo, con las tecnologias & frameworks más eficientes de nuestro tiempo, envia tu correo para reservar cita.</p>
+              <h5>By Yuber Ernesto Santana Lizardo</h5>
+          </div>
+          <div class="correo-footer">
+              <input class="input-footer" placeholder="Correo Electronico" type="email" name="" id="">
+              <input class="input-btn input-footer" type="submit" value="Enviar">
+          </div>
+      </div>
+  </footer>
 
     <script src="./scripts/tempData.js"></script>
     <script src="./scripts/index.js"></script>
