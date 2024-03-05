@@ -1,43 +1,185 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-html {
-    line-height: 1.15; 
-    -webkit-text-size-adjust: 100%;
-    
-}
-
-body{
-    margin: 0;
-    background-color: rgb(0, 0, 0);
-    color: white;
-}
-
-/*_______________________________________________________________________*/
-/*--------------------------------------HEADER---------------------------*/
-
-
-
-
-
 /*_______________________________________________________________________*/
 /*--------------------------------------COVER---------------------------*/
+
+/* .bgr-cover{
+    position: relative;
+    max-width: 70rem;
+    max-height: 50rem;
+    overflow: hidden; 
+} */
+
+/* .bgr-cover .overlay{
+    background: rgba(0, 0, 0, 0.346);
+    background: linear-gradient(111deg, rgba(22, 0, 28, 0.4023984594) 0%, rgba(194, 0, 255, 0.7049194678) 100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+} */
+
+.bgr-cover .cover{
+    /* width: auto;
+    display: block; */
+    width: 100%;
+    height: 38rem;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/*_______________________________________________________________________*/
+/*--------------------------------------LINKS---------------------------*/
+
+
+.contenido-texto{
+    padding: 15rem 2rem 7rem;
+
+}
+
+.contenido-texto nav{
+    display: flex;
+    gap: 15rem;
+}
+
+.contenido-texto nav a{
+    position: relative;
+    font-family: "montserrat", sans-serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    transition: .5s ease;
+}
+
+.contenido-texto nav a::before{
+    content: "____________";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    color: rgb(107, 0, 0);
+    z-index: 1;
+}
+
+.contenido-texto nav a:hover{
+    color: rgb(107, 0, 0);
+    font-weight: 400;
+    font-size: 2rem;
+}
 
 
 /*_______________________________________________________________________*/
 /*--------------------------------------CARDS---------------------------*/
 
-.img-star{
-    width: 20rem;
-    height: auto;
-    max-width: 100%;
-    object-fit: cover;
+.mostrar-texto{
+    padding: 7rem 0rem 2rem 0rem;
 }
 
+.mostrar-texto h1{
+    font-family: "montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    position: relative;
+}
+
+.mostrar-texto h1::before{
+    content: "||||||||||||||||||||";
+    position: absolute;
+    bottom: 6rem;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    color: rgb(107, 0, 0);
+    z-index: 1;
+}
+
+.mostrar-texto span{
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.img-star{
+    width: 20rem;
+    height: 20rem;
+    max-width: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+
+}
+
+.contenido-card{
+    gap: 2rem;
+    padding: 2rem 0rem;
+    
+}
+.contenido-card .card-body{
+    cursor: pointer;
+    transition: .5s ease;
+    opacity: 0.8;
+}
+
+.contenido-card .card-body:hover .img-star:hover{
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+    opacity: 1;
+}
 
 
 /*_______________________________________________________________________*/
 /*--------------------------------------SECTION---------------------------*/
 
+.mostrar-texto-fav h1{
+    font-family: "montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    position: relative;
+}
+
+.mostrar-texto-fav h1::before{
+    content: "||||||";
+    position: absolute;
+    bottom: 6rem;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    color: rgb(107, 0, 0);
+    z-index: 1;
+}
+
+.mostrar-texto-fav span{
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.mostrar-texto-fav {
+    padding: 7rem 0rem 2rem 0rem;
+}
+
+.contenido-section{
+    display: flex;
+    width: 37.5rem;
+    height: 26.875rem;
+    padding: 1rem 0rem 0.5rem 0rem;
+}
+
+.contenido-section img{
+    width: 0%;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.contenido-section img:hover{
+    cursor: crosshair;
+    width: 18.75rem;
+    opacity: 1;
+    filter: contrast(120%);
+}
 
 /*_______________________________________________________________________*/
 /*--------------------------------------FOOTER---------------------------*/

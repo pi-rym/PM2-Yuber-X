@@ -1,5 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+html {
+    line-height: 1.15; 
+    -webkit-text-size-adjust: 100%;
+    /* background-image: url(/front/img/Cards/pngwing.com\ \(2\).png);
+    background-size: 60rem ;
+    background-repeat: repeat;
+    background-position: center center; */
+    background-color: black;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+}
+
+/*_______________________________________________________________________*/
+/*--------------------------------------HEADER---------------------------*/
+
+
+
+header{
+    /* background-color: rgb(74, 0, 0); */
+    position: relative;
+}
+
+.navegador{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem 1rem;
+}
+
+.navegador a{
+    font-family: "montserrat", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(255, 255, 255); 
+}
+
+.navegador-principal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+.navegador-principal h1{
+    font-size: 2.5rem;
+}
+
+/*_______________________________________________________________________*/
+/*------------------------------------RE-USABLE--------------------------*/
+
+
+
 .contenedor{
     width: 95%;
     max-width: 120rem;
@@ -7,15 +69,15 @@
 }
 
 .texto-mont{
-    font-family: "montserrat", cursive;
-    font-weight: 400;
+    font-family: "montserrat", sans-serif;
+    font-weight: 800;
 }
 
 .texto-kono{
-    font-family: "kode-mono";
+    font-family: "kode-mono", sans-serif;
     font-weight: 400;
 }
-.modo-flexbox{
+.modo-flex{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,3 +88,5 @@
     justify-content: center;
     align-items: center;
 }
+
+

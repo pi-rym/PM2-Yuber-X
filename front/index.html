@@ -6,83 +6,139 @@
     <link rel="stylesheet" href="/front/style/style.css">
     <link rel="stylesheet" href="/front/style/reut.css">
     <link rel="stylesheet" href="/front/style/normalize.css">
-    <title>•MovieStar•</title>
+    <title>MovieStar</title>
   </head>
   <body>
-    <header>
-      <div class="contenedor">
-        <h1 class="texto-mont">♦ MovieStar ♣</h1>
-        <div class="contenedor navegador-principal modo-flexbox ">
-          <nav class="navegador texto-kono">
-            <a class="inicio" href="/front/index.html">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-                <path d="M10 12h4v4h-4z" />
-                </svg>
+    <header> <!--Header-->
+      <div class="bgr-cover">
+        <img class="cover" src="/front/img/Cards/Blade Runner 2049 cover 1.jpg" alt="">
+      </div>
+      <div class="contenedor navegador-principal">
+        <h1 class="texto-mont">MovieStar</h1>
+        <div class="contenedor-nav">
+
+          <nav class="navegador">
+
+            <a href="/front/index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+              <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+              <path d="M10 12h4v4h-4z" />
+              </svg>
             </a>
             <a href="/front/pages/cine.html">Historia</a>
             <a href="/front/pages/web.html">Web</a>
-            <a id="#contacto" href="#">Contacto</a>
           </nav>
+
         </div>
       </div>
+
     </header>
 
-    <div class="contenedor bgr-cover">
-      <div class="contenedor texto-mont">
-        <h1>Bienvenido a Pelis <br>MovieStar</h1>
-        <p>Todas las recomendaciones & Informacion que necesites de las mejores peliculas de todos los años</p>
+    <!-- <div class="bgr-cover">  Bgr-Cover
+      <div class="overlay">
+          <div class="contenedor texto-mont">
+            <h1>Bienvenido a Pelis <br>MovieStar</h1>
+            <p>Todas las recomendaciones & Informacion que necesites de las mejores peliculas de todos los años</p>
+          </div>
+          <img class="cover" src="/front/img/Cards/Blade Runner 2049 cover 1.jpg" alt="">
       </div>
+    </div> -->
+
+    <section class="contenedor contenido-texto modo-flex">
+      <nav>
+        <a href="/front/pages/cine.html">Historia del Cine</a>
+        <a href="/front/pages/web.html">Webs Recomendadas</a>
+        <a href="/front/pages/sobre.html">Sobre mi Proyecto</a>
+      </nav>
+    </section>
+    
+    <div class="mostrar-texto contenedor">
+      <h1><span>Mostrando</span> Ahora</h1>
     </div>
 
-    
-    <section class="contenedor">
-      <div class="contenido-card">
+    <section class="contenedor"> <!--Cards-->
+      <div class="contenido-card texto-mont modo-flex">
         <div class="card text-center mb-3" style="width: 18rem;">
           <div class="card-body">
             <img class="img-star" src="/front/img/Cards/Blade Runner 2049 - 2.jpg" alt="">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <h5 class="card-title">Blade Runner 2049</h5>
+            <p class="card-text">Action - Drama - Science Fiction</p>
           </div>
         </div>
         <div class="card text-center mb-3" style="width: 18rem;">
           <div class="card-body">
             <img class="img-star" src="/front/img/Cards/Hereditary 2.jpg" alt="">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Hereditary</h5>
+            <p class="card-text">Horror - Drama - Suspense </p>
           </div>
         </div>
         <div class="card text-center mb-3" style="width: 18rem;">
           <div class="card-body">
             <img class="img-star" src="/front/img/Cards/Intelestellar 1.jpg" alt="">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Intelestellar</h5>
+            <p class="card-text">Suspense - Science Fiction</p>
           </div>
         </div>
         <div class="card text-center mb-3" style="width: 18rem;">
           <div class="card-body">
             <img class="img-star" src="/front/img/Cards/Pacific Rim.jpg" alt="">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Pacific Rim</h5>
+            <p class="card-text">Action - Science Fiction</p>
           </div>
         </div>
       </div>
-      
+
+      <div class="contenido-card texto-mont modo-flex">
+        <div class="card text-center mb-3" style="width: 18rem;">
+          <div class="card-body">
+            <img class="img-star" src="/front/img/Cards/The Crow.jpg" alt="">
+            <h5 class="card-title">The Crow</h5>
+            <p class="card-text">Action - Suspense - Thriller</p>
+          </div>
+        </div>
+        <div class="card text-center mb-3" style="width: 18rem;">
+          <div class="card-body">
+            <img class="img-star" src="/front/img/Cards/The Batman 1.jpeg" alt="">
+            <h5 class="card-title">The Batman</h5>
+            <p class="card-text">Action - Suspense - Police </p>
+          </div>
+        </div>
+        <div class="card text-center mb-3" style="width: 18rem;">
+          <div class="card-body">
+            <img class="img-star" src="/front/img/Cards/Intelestellar 1.jpg" alt="">
+            <h5 class="card-title">Intelestellar</h5>
+            <p class="card-text">Suspense - Science Fiction</p>
+          </div>
+        </div>
+        <div class="card text-center mb-3" style="width: 18rem;">
+          <div class="card-body">
+            <img class="img-star" src="/front/img/Cards/Pacific Rim.jpg" alt="">
+            <h5 class="card-title">Pacific Rim</h5>
+            <p class="card-text">Action - Science Fiction</p>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <div class="mostrar-texto-fav contenedor">
+      <h1>Tus<span> Favoritos</span></h1>
+    </div>
 
-    <section class="contenedor">
+    <section class="contenedor contenido-section">  <!--Section-->
+      <img src="/front/img/Section/3980db_by_pascalcampion-daiyr7f.jpg" alt="">
+      <img src="/front/img/Section/Screenshot_2019-09-02-23-50-06.png" alt="">
+      <img src="/front/img/Section/Screenshot_2019-09-21-18-08-13-1.png" alt="">
+      <img src="/front/img/Section/Screenshot_2019-12-04-02-41-41-1.png" alt="">
+      <img src="/front/img/Section/Screenshot_2020-01-12-10-39-00-1.png" alt="">
+      <img src="/front/img/Section/Wallpaper-3050.jpg" alt="">
     </section>
 
-    <footer class="footer">
+    <footer class="footer"> <!--Footer-->
       <div class="contenedor contenido-footer">
           <div class="contenedor contenedor-footer">
-              <h1>Pelis ♦MovieStar♣</h1>
+              <h1>Pelis MovieStar</h1>
               <p>Freelancer FullStack Activo, con las tecnologias & frameworks más eficientes de nuestro tiempo, envia tu correo para reservar cita.</p>
               <h5>By Yuber Ernesto Santana Lizardo</h5>
           </div>
