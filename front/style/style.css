@@ -73,6 +73,38 @@
 
 /*_______________________________________________________________________*/
 /*--------------------------------------CARDS---------------------------*/
+.contenedor-card-detalles{
+    margin: 1rem;
+    padding: 3rem 12rem;
+    gap: 5rem;
+}
+
+.contenedor-card-detalles img{
+    width: 20rem;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.contenido-detalles .titulo-card{
+    padding: 3rem 0rem;
+    color: rgb(141, 0, 0);
+}
+
+.contenido-detalles h1{
+    font-weight: 400;
+    font-size: 4rem;
+}
+
+.contenido-detalles p{
+    font-weight: 200;
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+}
+
+.contenido-detalles h4{
+
+}
+
 
 .mostrar-texto{
     padding: 7rem 0rem 2rem 0rem;
