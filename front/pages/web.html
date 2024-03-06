@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/front/style/style.css">
     <link rel="stylesheet" href="/front/style/reut.css">
-    <title>Catalogos de Cine</title>
+    <link rel="stylesheet" href="/front/style/normalize.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Web Recomendadas</title>
   </head>
   <body>
     <header> <!--Header-->
-      <div class="bgr-cover">
-        <img class="cover" src="/front/img/Cards/Blade Runner 2049 cover 1.jpg" alt="">
+      <div class="slider">
+        <div class="bgr-cover slider--inner">
+          <img class="cover" src="/front/img/Cards/Blade Runner 2049 cover 1.jpg" alt="">
+          <img class="cover" src="/front/img/Cards/The Batman cover 4.jpg" alt="">
+          <img class="cover" src="/front/img/Cards/Blade Runner 2049 cover 4.jpg" alt="">
+          <img class="cover" src="/front/img/Cards/The Batman cover 1.jpg" alt="">
+        </div>
       </div>
       <div class="contenedor navegador-principal">
         <h1 class="texto-mont">MovieStar</h1>
@@ -35,16 +42,6 @@
 
     </header>
 
-    <!-- <div class="bgr-cover">  Bgr-Cover
-      <div class="overlay">
-          <div class="contenedor texto-mont">
-            <h1>Bienvenido a Pelis <br>MovieStar</h1>
-            <p>Todas las recomendaciones & Informacion que necesites de las mejores peliculas de todos los años</p>
-          </div>
-          <img class="cover" src="/front/img/Cards/Blade Runner 2049 cover 1.jpg" alt="">
-      </div>
-    </div> -->
-
     <section class="contenedor contenido-texto modo-flex">
       <nav>
         <a href="/front/pages/cine.html">Historia del Cine</a>
@@ -52,6 +49,23 @@
         <a href="/front/pages/sobre.html">Sobre mi Proyecto</a>
       </nav>
     </section>
+
+    <div class="web-recomendadas texto-mont">  
+      <div class="web-recomendadas-container modo-flex">
+        <div>
+          <h3>PelisPlus</h3>
+          <a href="https://www17.pelisplushd.to/"><img src="/front/img/Cards/Blade Runner 2049 cover 2.jpg" alt=""></a>
+        </div>
+        <div>
+          <h3>Cuevana</h3>
+          <a href="https://c1.cuevana10.com/"><img src="/front/img/Cards/The Crow cover 2.jpg" alt=""></a>
+        </div>
+        <div>
+          <h3>Repelis</h3>
+          <a href="https://plus.repelis.top/"><img src="/front/img/Cards/The Batman cover 2.jpg" alt=""></a>
+        </div>
+      </div>
+    </div>
     
     <div class="mostrar-texto contenedor">
       <h1><span>Mostrando</span> Ahora</h1>

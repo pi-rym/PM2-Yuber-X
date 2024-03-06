@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/front/style/style.css">
     <link rel="stylesheet" href="/front/style/reut.css">
-    <title>Catalogos de Cine</title>
+    <link rel="stylesheet" href="/front/style/normalize.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Historia del Cine</title>
   </head>
   <body>
     <header> <!--Header-->
-      <div class="bgr-cover">
-        <img class="cover" src="/front/img/Cards/Blade Runner 2049 cover 1.jpg" alt="">
+      <div class="slider">
+        <div class="bgr-cover slider--inner">
+          <img class="cover" src="/front/img/Cards/Blade Runner 2049 cover 1.jpg" alt="">
+          <img class="cover" src="/front/img/Cards/The Batman cover 4.jpg" alt="">
+          <img class="cover" src="/front/img/Cards/Blade Runner 2049 cover 4.jpg" alt="">
+          <img class="cover" src="/front/img/Cards/The Batman cover 1.jpg" alt="">
+        </div>
       </div>
       <div class="contenedor navegador-principal">
         <h1 class="texto-mont">MovieStar</h1>
@@ -35,16 +42,6 @@
 
     </header>
 
-    <!-- <div class="bgr-cover">  Bgr-Cover
-      <div class="overlay">
-          <div class="contenedor texto-mont">
-            <h1>Bienvenido a Pelis <br>MovieStar</h1>
-            <p>Todas las recomendaciones & Informacion que necesites de las mejores peliculas de todos los años</p>
-          </div>
-          <img class="cover" src="/front/img/Cards/Blade Runner 2049 cover 1.jpg" alt="">
-      </div>
-    </div> -->
-
     <section class="contenedor contenido-texto modo-flex">
       <nav>
         <a href="/front/pages/cine.html">Historia del Cine</a>
@@ -52,6 +49,55 @@
         <a href="/front/pages/sobre.html">Sobre mi Proyecto</a>
       </nav>
     </section>
+
+    <div class="historia-titulo contenedor">
+      <div class="overlay">
+          <div class="contenedor texto-mont">
+            <h1>El Inicio del Cine</h1>
+            <p>
+               La idea de capturar, crear y reproducir el movimiento por medios mecánicos es muy antigua, 
+               y existieron antecedentes tales como la cámara oscura, el taumatropo, la linterna mágica o el fusil fotográfico. 
+               La técnica para captar la realidad por medios luminosos había sido ya 
+               desarrollada por los inventores del daguerrotipo y la fotografía, a mediados del siglo xix. <br><br>
+
+               Thomas Alva Edison, inventor de la lámpara incandescente y el fonógrafo, estuvo muy cerca también de inventar el cine, 
+               al patentar el Quinetoscopio creado en su laboratorio por William Dickson, una máquina que solo permitía funciones limitadas. <br><br>
+
+               Inspirándose en este e integrando diversos inventos y descubrimientos de la época, como el rollo de fotos de Eastman, 
+               los hermanos Lumière (hijos del fotógrafo Antoine Lumière) crearon el cinematógrafo: este dispositivo 
+               permitía la toma, proyección y hasta el copiado de imágenes en movimiento, así como el espectáculo 
+               público derivado de la exhibición del funcionamiento del aparato. Sin embargo es muy probable que el verdadero 
+               inventor del cine fuese Louis Le Prince, el cual realizó su primera película en 1888. <br><br>
+
+               La primera presentación de los hermanos Lumière fue el 28 de diciembre de 1895 en París y consistió en una 
+               serie de imágenes documentales, de las cuales se recuerda aquella en la que aparecen los trabajadores 
+               de una fábrica (propiedad de los mismos Lumière), y la de un tren (en la estación de La Ciotat) que parecía 
+               abalanzarse sobre los espectadores; ante estas imágenes las personas reaccionaron con un instintivo pavor, 
+               creyendo que el tren los atropellaría. La función de las primeras "películas" era mayormente documental, con el agregado del movimiento. 
+               Tiempo después lograron el primer filme argumental de la historia, El regador regado. <br><br>
+
+               Por un tiempo, el cine fue considerado una atracción menor, incluso un número de feria, 
+               pero el puntapié inicial para realizar historias y experimentar recursos narrativos visuales fue 
+               cuando el ilusionista Georges Méliès usó en un primer momento el cinematógrafo como un elemento 
+               más para sus espectáculos, pero luego los desarrollaría en el cine, creando rudimentarios 
+               —pero eficaces— efectos especiales. Los noveles realizadores captaron las grandes posibilidades que el 
+               invento ofrecía y fue así como en la primera década del siglo xx surgieron múltiples pequeños estudios fílmicos, 
+               tanto en Estados Unidos como en Europa. En la época, los filmes eran de pocos minutos y metraje, 
+               trataban temas más o menos simples y, tanto por decorados como por vestuario, eran de producción relativamente barata. 
+               Además, la técnica no había resuelto el problema del sonido, por lo que las funciones se acompañaban 
+               con un piano y un relator (ver cine mudo). Pero en este tiempo surgieron la casi totalidad de los géneros cinematográficos 
+               (ciencia ficción, históricas o de época); el género ausente fue, por supuesto, la comedia musical, que debería esperar 
+               hasta la aparición del cine sonoro. También en la época se produjeron los primeros juicios en torno a los derechos de 
+               autor de las adaptaciones de novelas y obras teatrales al cine, lo que llevaría con el tiempo a la creación de las 
+               franquicias cinematográficas basadas en personajes o sagas. <br><br>
+
+               El 28 de diciembre de 1895 se realiza la primera proyección cinematográfica abierta al público. 
+               Ya se habían realizado anteriormente proyecciones consideradas como experimentos delante de varios científicos. 
+               Ambos hermanos consideran al cine como un simple experimento que no tiene futuro. <br><br>
+            </p>
+          </div>
+      </div>
+    </div> 
     
     <div class="mostrar-texto contenedor">
       <h1><span>Mostrando</span> Ahora</h1>
