@@ -34,8 +34,8 @@
               <path d="M10 12h4v4h-4z" />
               </svg>
             </a>
-            <a href="/front/pages/cine.html">Historia</a>
-            <a href="/front/pages/web.html">Web</a>
+            <a href="#peli-link">Peliculas</a>
+            <a href="#enlace-page">Enlaces</a>
           </nav>
 
         </div>
@@ -43,7 +43,7 @@
 
     </header>
 
-    <section class="contenedor contenido-texto modo-flex"> <!--Enlaces-->
+    <section id="enlace-page" class="contenedor contenido-texto modo-flex"> <!--Enlaces-->
       <nav>
         <a href="/front/pages/cine.html">Historia del Cine</a>
         <a href="/front/pages/web.html">Webs Recomendadas</a>
@@ -55,32 +55,33 @@
       <h1><span>Mostrando</span> Ahora</h1>
     </div>
 
-    <section class="contenedor">
-      <div class="contenedor-card-detalles modo-flex">
+    <section class="contenedor modo-flex">  <!--Card-Master-->
+      <div id="card-master"  class="contenedor-card-detalles">
         
         <div class="img-position">
-          <img src="/front/img/Cards/The Batman 1.jpeg" alt="">
+          <img id="poster" src="/front/img/Cards/The Batman 1.jpeg" alt="">
         </div>
 
         <div class="contenido-detalles texto-mont">
           <span class="titulo-card">Sinopsis</span>
-          <h1>The Batman</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          <h1 id="titulo">The Batman</h1>
+          <p id="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
              Quaerat officia voluptates magni eligendi error. 
              Cum consequuntur rerum possimus beatae eveniet veniam 
              reprehenderit asperiores ab alias delectus quas, 
              voluptatum, dolorem accusantium.</p>
-          <h4>Action - Science Fiction</h4>
-          <h6>Jorge Lucas, <span>2022</span></h6>
-          <h5>2h 24min</h5>
+          <h4 id="genero">Action - Science Fiction</h4>
+          <h6 id="director">Jorge Lucas, <span id="year">2022</span></h6>
+          <h5 id="duracion">2h 24min</h5>
         </div>
 
         </div>
       </div>
     </section>
 
-    <section class="contenedor"> <!--Cards-->
-      <div class="contenido-card texto-mont modo-flex">
+    <section id="peli-link" class="contenedor"> <!--Cards-->
+      <!-- <div class="contenido-card texto-mont modo-flex">
+        
         <div class="card text-center mb-3" style="width: 18rem;">
           <div class="card-body">
             <img class="img-star" src="/front/img/Cards/Blade Runner 2049 - 2.jpg" alt="">
@@ -140,7 +141,7 @@
             <p class="card-text">Action - Science Fiction</p>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <div class="mostrar-texto-fav contenedor">  <!--Titulo-->
@@ -159,8 +160,8 @@
     <footer class="footer"> <!--Footer-->
       <div class="contenedor contenido-footer">
           <div class="contenedor contenedor-footer">
-              <h1>Pelis MovieStar</h1>
-              <p>Freelancer FullStack Activo, con las tecnologias & frameworks más eficientes de nuestro tiempo, envia tu correo para reservar cita.</p>
+              <h1>MovieStar</h1>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas suscipit fugit labore optio blanditiis iusto facilis maxime vero voluptatem quo, temporibus, dolorum, necessitatibus debitis saepe consequatur! Fugit illo quam assumenda.</p>
               <h5>By Yuber Ernesto Santana Lizardo</h5>
           </div>
           <div class="correo-footer">
@@ -170,7 +171,6 @@
       </div>
   </footer>
 
-    <script src="./scripts/tempData.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

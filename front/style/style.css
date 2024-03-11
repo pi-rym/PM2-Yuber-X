@@ -167,6 +167,11 @@
     font-weight: 400;
 }
 
+#card-master{
+    display: flex;
+    gap: 5rem;
+}
+
 
 .mostrar-texto{
     padding: 7rem 0rem 2rem 0rem;
@@ -209,6 +214,14 @@
     padding: 2rem 0rem;
     
 }
+
+
+#peli-link{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
 .contenido-card .card-body{
     cursor: pointer;
     transition: .5s ease;
@@ -220,6 +233,12 @@
     height: 30rem;
     object-fit: cover;
     opacity: 1;
+}
+
+.modo-flex-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -303,14 +322,14 @@ footer{
     font-weight: 100;
 }
 .contenedor-footer p{
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: 100;
     margin: 1rem 0rem 2rem 0rem;
 }
 .contenedor-footer h1{
     font-family: 'Montserrat', cursive;
-    font-weight: 400;   
-    font-size: 3rem;
+    font-weight: 500;   
+    font-size: 2.5rem;
 }
 
 .correo-footer{
@@ -326,4 +345,10 @@ footer{
     padding: 2rem 3rem;
     border-radius: 0.1rem;
     border: none;
+    color: white;
+    background-color: black;
+}
+
+.input-btn{
+    cursor: pointer;
 }
