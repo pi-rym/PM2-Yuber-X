@@ -89,74 +89,76 @@ const tarjetasData = [
     },
 ];
 
-/** Función para generar el HTML de la card **/
-function generarCard(titulo, poster, genero) {
-  return `
-  <div class="contenido-card texto-mont modo-flex-card">
-    <div class="card text-center mb-3" style="width: 18rem;">
-      <div class="card-body">
-        <img class="img-star" src="${poster}" alt="${titulo}">
-        <h5 class="card-title">${titulo}</h5>
-        <p class="card-text">${genero.join(" - ")}</p>
-      </div>
-    </div>
-  </div>
-  `;
-}
+module.exports = tarjetasData;
 
-/**  Función para agregar las cards al contenedor en el HTML  **/
-function agregarCardsAlHTML() {
-  const contenedor = document.getElementById("peli-link");
-  tarjetasData.forEach((tarjeta) => {
-    const cardHTML = generarCard(tarjeta.title, tarjeta.poster, tarjeta.genre);
-    contenedor.innerHTML += cardHTML;
-  });
-}
+// /** Función para generar el HTML de la card **/
+// function generarCard(titulo, poster, genero) {
+//   return `
+//   <div class="contenido-card texto-mont modo-flex-card">
+//     <div class="card text-center mb-3" style="width: 18rem;">
+//       <div class="card-body">
+//         <img class="img-star" src="${poster}" alt="${titulo}">
+//         <h5 class="card-title">${titulo}</h5>
+//         <p class="card-text">${genero.join(" - ")}</p>
+//       </div>
+//     </div>
+//   </div>
+//   `;
+// }
 
-document.addEventListener("DOMContentLoaded", agregarCardsAlHTML);
+// /**  Función para agregar las cards al contenedor en el HTML  **/
+// function agregarCardsAlHTML() {
+//   const contenedor = document.getElementById("peli-link");
+//   tarjetasData.forEach((tarjeta) => {
+//     const cardHTML = generarCard(tarjeta.title, tarjeta.poster, tarjeta.genre);
+//     contenedor.innerHTML += cardHTML;
+//   });
+// }
 
-
-/*___________________________________________________________________________________________ */
-
+// document.addEventListener("DOMContentLoaded", agregarCardsAlHTML);
 
 
-/** Función para generar el HTML de la card **/
-function generarCard(titulo, poster, genero) {
-return `
-  <div class="contenido-card texto-mont modo-flex-card">
-    <div class="card text-center mb-3" style="width: 18rem;">
-      <div class="card-body" onclick="mostrarDetalles('${titulo}', '${poster}', '${genero.join(" - ")}')">
-        <img class="img-star" src="${poster}" alt="${titulo}">
-        <h5 class="card-title">${titulo}</h5>
-        <p class="card-text">${genero.join(" - ")}</p>
-      </div>
-    </div>
-  </div>
-`;
-}
+// /*___________________________________________________________________________________________ */
 
-/** Función para mostrar los detalles de la película **/
-function mostrarDetalles(titulo, poster, genero) {
-// Actualiza los elementos en la card master con los datos de la película seleccionada
-document.getElementById("poster").src = poster;
-document.getElementById("titulo").textContent = titulo;
-document.getElementById("descripcion").textContent = tarjetasData.find(tarjeta => tarjeta.title === titulo).description;
-document.getElementById("genero").textContent = genero;
-document.getElementById("director").textContent = tarjetasData.find(tarjeta => tarjeta.title === titulo).director + ', ';
-document.getElementById("year").textContent = tarjetasData.find(tarjeta => tarjeta.title === titulo).year;
-document.getElementById("duracion").textContent = tarjetasData.find(tarjeta => tarjeta.title === titulo).duration;
-}
 
-/** Función para agregar las cards al contenedor en el HTML  **/
-function agregarCardsAlHTML() {
-const contenedor = document.getElementById("peli-link");
-tarjetasData.forEach((tarjeta) => {
-  const cardHTML = generarCard(tarjeta.title, tarjeta.poster, tarjeta.genre);
-  contenedor.innerHTML += cardHTML;
-});
-}
 
-// Llama a la función para agregar las cards al cargar la página
-agregarCardsAlHTML();
+// /** Función para generar el HTML de la card **/
+// function generarCard(titulo, poster, genero) {
+// return `
+//   <div class="contenido-card texto-mont modo-flex-card">
+//     <div class="card text-center mb-3" style="width: 18rem;">
+//       <div class="card-body" onclick="mostrarDetalles('${titulo}', '${poster}', '${genero.join(" - ")}')">
+//         <img class="img-star" src="${poster}" alt="${titulo}">
+//         <h5 class="card-title">${titulo}</h5>
+//         <p class="card-text">${genero.join(" - ")}</p>
+//       </div>
+//     </div>
+//   </div>
+// `;
+// }
+
+// /** Función para mostrar los detalles de la película **/
+// function mostrarDetalles(titulo, poster, genero) {
+// // Actualiza los elementos en la card master con los datos de la película seleccionada
+// document.getElementById("poster").src = poster;
+// document.getElementById("titulo").textContent = titulo;
+// document.getElementById("descripcion").textContent = tarjetasData.find(tarjeta => tarjeta.title === titulo).description;
+// document.getElementById("genero").textContent = genero;
+// document.getElementById("director").textContent = tarjetasData.find(tarjeta => tarjeta.title === titulo).director + ', ';
+// document.getElementById("year").textContent = tarjetasData.find(tarjeta => tarjeta.title === titulo).year;
+// document.getElementById("duracion").textContent = tarjetasData.find(tarjeta => tarjeta.title === titulo).duration;
+// }
+
+// /** Función para agregar las cards al contenedor en el HTML  **/
+// function agregarCardsAlHTML() {
+// const contenedor = document.getElementById("peli-link");
+// tarjetasData.forEach((tarjeta) => {
+//   const cardHTML = generarCard(tarjeta.title, tarjeta.poster, tarjeta.genre);
+//   contenedor.innerHTML += cardHTML;
+// });
+// }
+
+// // Llama a la función para agregar las cards al cargar la página
+// agregarCardsAlHTML();
 
 
