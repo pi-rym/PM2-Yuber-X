@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*_______________________________________________________________________*/
+/*-------------------------------------SLIDER--------------------------------*/
+
+.slider{
+    overflow: hidden;
+}
+
+.slider--inner{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transition: all 0.5s ease-in;
+    align-items: center;
+}
+.slider--inner img{
+    width: 100%;
+    height: 100rem;
+    object-fit: cover;
+}
+
+.bgr-cover .cover{
+    width: 100%;
+    height: 38rem;
+    object-fit: cover;
+}
+
+
+/*_______________________________________________________________________*/
+/*---------------------------------WEB-RECOMENDADAS--------------------------------*/
+
+.web-recomendadas-container{
+    gap: 2rem;
+}
+
+.web-recomendadas img{
+    width: 20rem;
+    height: 20rem;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: .5s ease;
+}
+
+.web-recomendadas img:hover{
+    width: 30rem;
+    height: 30rem;
+}
+
+.web-recomendadas h3{
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+
+
+
+/*_______________________________________________________________________*/
+/*--------------------------------------HISTORIA---------------------------*/
+
+.historia-titulo {
+    padding: 2rem 2rem;
+    display: flex;
+}
+
+.historia-titulo h1{
+    font-weight: 200;
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 0rem 2rem 2rem 0rem;
+    position: relative;
+}
+
+.historia-titulo h1::before{
+    content: "______________";
+    position: absolute;
+    bottom: 0;
+    left: -1rem;
+    width: 100%;
+    height: 4rem;
+    color: rgb(107, 0, 0);
+    z-index: 1;
+
+}
+
+.historia-titulo p{
+    padding: 0rem 5rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+/*_______________________________________________________________________*/
+/*--------------------------------------LINKS---------------------------*/
+
+
+.contenido-texto{
+    padding: 15rem 2rem 7rem;
+
+}
+
+.contenido-texto nav{
+    display: flex;
+    gap: 15rem;
+}
+
+.contenido-texto nav a{
+    position: relative;
+    font-family: "montserrat", sans-serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    transition: .5s ease;
+}
+
+.contenido-texto nav a::before{
+    content: "____________";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    color: rgb(107, 0, 0);
+    z-index: 1;
+}
+
+.contenido-texto nav a:hover{
+    color: rgb(107, 0, 0);
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+
+/*_______________________________________________________________________*/
+/*--------------------------------------CARDS---------------------------*/
+.contenedor-card-detalles{
+    margin: 1rem;
+    padding: 3rem 12rem;
+    gap: 5rem;
+}
+
+.contenedor-card-detalles img{
+    width: 20rem;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.contenido-detalles .titulo-card{
+    padding: 3rem 0rem;
+    color: rgb(141, 0, 0);
+}
+
+.contenido-detalles h1{
+    font-weight: 400;
+    font-size: 4rem;
+}
+
+.contenido-detalles p{
+    font-weight: 200;
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+}
+
+.contenido-detalles h4{
+    font-weight: 400;
+}
+
+#card-master{
+    display: flex;
+    gap: 5rem;
+}
+
+
+.mostrar-texto{
+    padding: 7rem 0rem 2rem 0rem;
+}
+
+.mostrar-texto h1{
+    font-family: "montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    position: relative;
+}
+
+.mostrar-texto h1::before{
+    content: "||||||||||||||||||||";
+    position: absolute;
+    bottom: 6rem;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    color: rgb(107, 0, 0);
+    z-index: 1;
+}
+
+.mostrar-texto span{
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.img-star{
+    width: 20rem;
+    height: 20rem;
+    max-width: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+
+}
+
+.contenido-card{
+    gap: 2rem;
+    padding: 2rem 0rem;
+    
+}
+
+
+#peli-link{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contenido-card .card-body{
+    cursor: pointer;
+    transition: .5s ease;
+    opacity: 0.8;
+}
+
+.contenido-card .card-body:hover .img-star:hover{
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+    opacity: 1;
+}
+
+.modo-flex-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*_______________________________________________________________________*/
+/*--------------------------------------SECTION---------------------------*/
+
+.mostrar-texto-fav h1{
+    font-family: "montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    position: relative;
+}
+
+.mostrar-texto-fav h1::before{
+    content: "||||||";
+    position: absolute;
+    bottom: 6rem;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    color: rgb(107, 0, 0);
+    z-index: 1;
+}
+
+.mostrar-texto-fav span{
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.mostrar-texto-fav {
+    padding: 7rem 0rem 2rem 0rem;
+}
+
+.contenido-section{
+    display: flex;
+    width: 37.5rem;
+    height: 26.875rem;
+    padding: 1rem 0rem 0.5rem 0rem;
+}
+
+.contenido-section img{
+    width: 0%;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.contenido-section img:hover{
+    cursor: crosshair;
+    width: 18.75rem;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+/*_______________________________________________________________________*/
+/*--------------------------------------FOOTER---------------------------*/
+
+
+
+footer{
+    color: rgb(122, 122, 122);
+    background-color: rgb(58, 0, 0);
+}
+
+.contenido-footer{
+    margin: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.contenedor-footer{
+    margin: 1rem;
+    padding: 1rem;
+}
+.contenedor-footer h5{
+    font-family: 'Montserrat', cursive;
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 100;
+}
+.contenedor-footer p{
+    font-size: 1.3rem;
+    font-weight: 100;
+    margin: 1rem 0rem 2rem 0rem;
+}
+.contenedor-footer h1{
+    font-family: 'Montserrat', cursive;
+    font-weight: 500;   
+    font-size: 2.5rem;
+}
+
+.correo-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 0.5rem;
+}
+
+.input-footer{
+    font-family: 'Montserrat';
+    padding: 2rem 3rem;
+    border-radius: 0.1rem;
+    border: none;
+    color: white;
+    background-color: black;
+}
+
+.input-btn{
+    cursor: pointer;
+}
