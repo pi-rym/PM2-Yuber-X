@@ -1,6 +1,6 @@
 const obtenerDatosPeliculas = require("../scripts/api");
 const agregarCardsAlHTML = require("../scripts/cards");
-// const scrollNav = require("../scripts/scroll");
+const scrollNav = require("../scripts/scroll");
 // const interval = require("../scripts/slider")
 const tempData = require("../scripts/tempData");
 
@@ -33,8 +33,12 @@ $(document).ready(function () {
     )
     .catch(b => console.log(b))
 
+
 });
 
+$(document).ready(function(){
+  scrollNav();
+})
 
 const ShowDetail =(element)=>{
   const img = element.querySelector("img");
