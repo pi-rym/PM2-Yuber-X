@@ -31,7 +31,7 @@ describe('CarritoCompra', () => {
     const producto2 = { nombre: 'Pantalón', precio: 30 };
     carrito.agregarProducto(producto1);
     carrito.agregarProducto(producto2);
-    const totalConDescuento = carrito.aplicarDescuento(10); // 10% de descuento
+    const totalConDescuento = carrito.aplicarDescuento(10);
     expect(totalConDescuento).toBe(45);
   });
 

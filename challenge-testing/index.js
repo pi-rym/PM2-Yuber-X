@@ -4,7 +4,6 @@ class CarritoCompra {
     }
 
     agregarProducto(producto){
-        if (typeof producto != "string" || typeof producto != "number" || typeof producto != 'object') return null;
         this.Carrito.push(producto);
     }
 
