@@ -121,7 +121,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 4rem;
+    height: 6.5rem;
     color: rgb(107, 0, 0);
     z-index: 1;
 }
@@ -292,6 +292,96 @@
     width: 18.75rem;
     opacity: 1;
     filter: contrast(120%);
+}
+
+/*_______________________________________________________________________*/
+/*--------------------------------------FORMULARIO---------------------------*/
+
+
+
+fieldset{
+    border: none;
+    background-color: rgb(26, 26, 26);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    overflow: hidden;
+    
+}
+
+.contenedor-campos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.fila {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.campo{
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: none;
+    box-sizing: border-box;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+.btn{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    cursor: default;
+}
+
+.btn, .campo{
+    flex: none;
+    display: flex;
+    min-width: 10rem;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+input[type= "button"] {
+    cursor: pointer;
+    width: auto;
+    padding: 0.5rem 1rem;
+    background-color: rgb(175, 20, 20);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+}
+
+input[type="button"]:hover{
+    background-color: white;
+    color: black;
+}
+
+.btn .campo input[type = "button"] {
+    display: block;
+    width: auto;
+    margin: 0;
 }
 
 /*_______________________________________________________________________*/

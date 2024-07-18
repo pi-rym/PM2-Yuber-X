@@ -23,15 +23,21 @@ $(document).ready(function () {
     .then(data => {
       agregarCardsAlHTML(data)
 
+      scrollNav();
+
       const elements = document.getElementsByClassName("card-values");
       Array.from(elements).forEach((element) => {
-        element.addEventListener("click",ShowDetail(element));
+        element.addEventListener("click", () => {
+          ShowDetail(element)
+        }); 
       });
     }
 
 
     )
-    .catch(b => console.log(b))
+    .catch(error => {
+      console.error("Error al obtener los datos", error);
+    });
 
 });
 
@@ -41,12 +47,16 @@ const ShowDetail =(element)=>{
   const h5 = element.querySelector("h5");
   const p = element.querySelector("p");
 
-  const cardData = {
-    titulo: h5.textContent,
-    poster: img.src,
-    genero: p.textContent
-  };
-  const { titulo, poster, genero } = cardData;
+  if (img && h5 && p) {
+    const cardData = {
+      titulo: h5.textContent,
+      poster: img.src,
+      genero: p.textContent
+    };
 
-  mostrarDetalles(titulo, poster, genero)
+    const { titulo, poster, genero } = cardData;
+    mostrarDetalles(titulo, poster, genero);
+  } else {
+    console.error("No se encontraron elementos necesarios dentro del elemento clicado.");
+  }
 }
