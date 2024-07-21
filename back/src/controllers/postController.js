@@ -15,5 +15,10 @@ module.exports= {
                 error: "error interno desde el servidor",
             });
         }
+    },
+    createMovies: async (req, res) =>{
+        const {title, year, description, director, duration, genre, rate, poster} = req.body;
+        const mewMovie = await moviesService.createMovies({title, year, description, director, duration, genre, rate, poster});
+        res.status(201).json(newMovie);
     }
 };
