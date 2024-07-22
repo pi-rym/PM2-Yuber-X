@@ -8,13 +8,24 @@ module.exports = {
         return tarjetasData;
         
       } catch (error) {
+
         console.error("Error al obtener los datos de la peliculas: ", error);
         throw error; 
+
       }
     },
 
     createMovies: async (movie) =>{
-      const newMovie = await Movies.create(movie);
-      return newMovie;
+      try {
+        
+        const newMovie = await Movies.create(movie);
+        return newMovie;
+
+      } catch (error) {
+
+        console.error("Error al crear una nueva pelicula: ", error);
+        throw error;
+        
+      }
     },
 };

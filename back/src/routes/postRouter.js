@@ -7,4 +7,6 @@ postRouter.get("/", postController.getAllPosts);
 
 postRouter.get("/movies", postController.getMovies);
 
+postRouter.post("/movies", postController.createMovies);
+
 module.exports = postRouter;

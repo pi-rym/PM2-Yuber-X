@@ -41,7 +41,7 @@ const tarjetasData = [
       genre: ["Action", "Crime", "Drama"],
       rate: 7.8,
       poster:
-        src = "/front/img/Cards/The Batman 1.jpeg",
+        "https://m.media-amazon.com/images/I/71kUTilIdiL._AC_SL1500_.jpg",
     },
     {
       title: "Pacific Rim",

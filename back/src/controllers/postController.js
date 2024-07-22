@@ -17,8 +17,16 @@ module.exports= {
         }
     },
     createMovies: async (req, res) =>{
-        const {title, year, description, director, duration, genre, rate, poster} = req.body;
-        const mewMovie = await moviesService.createMovies({title, year, description, director, duration, genre, rate, poster});
-        res.status(201).json(newMovie);
+        try {
+            
+            const {title, year, description, director, duration, genre, rate, poster} = req.body;
+            const mewMovie = await moviesService.createMovies({title, year, description, director, duration, genre, rate, poster});
+            res.status(201).json(newMovie);
+        
+        } catch (error) {
+            res.status(500).json({
+                error:"Error interno del servidor",
+            });
+        }
     }
 };
