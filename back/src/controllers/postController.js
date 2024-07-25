@@ -2,7 +2,7 @@ const moviesService = require("../services/moviesService");
 
 module.exports= {
     getAllPosts: async (req, res) => {
-        res.status(200).send("Endpoint para obtener POSTS");
+      await res.status(200).send("Endpoint para obtener POSTS");
     },
     getMovies: async (req, res) => {
         try {
@@ -20,12 +20,18 @@ module.exports= {
         try {
             
             const {title, year, description, director, duration, genre, rate, poster} = req.body;
-            const mewMovie = await moviesService.createMovies({title, year, description, director, duration, genre, rate, poster});
+
+            if (!title || !year || !description || !director || !duration || !Array.isArray(genre) || !rate || !poster) {
+                return res.status(400).json({ error: "Todos los campos son obligatorios y deben llenarse correctamente formateados"})
+            }
+
+            const newMovie = await moviesService.createMovies({title, year, description, director, duration, genre, rate, poster});
             res.status(201).json(newMovie);
         
         } catch (error) {
+            console.error("Error al crear una pelicula: ", error);
             res.status(500).json({
-                error:"Error interno del servidor",
+                error:"Error interno desde el servidor, en postController",
             });
         }
     }

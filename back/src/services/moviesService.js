@@ -9,7 +9,7 @@ module.exports = {
         
       } catch (error) {
 
-        console.error("Error al obtener los datos de la peliculas: ", error);
+        console.error("Error al obtener los datos de la peliculas, acá en servicios: ", error);
         throw error; 
 
       }
@@ -23,9 +23,9 @@ module.exports = {
 
       } catch (error) {
 
-        console.error("Error al crear una nueva pelicula: ", error);
+        console.error("Error al crear una nueva pelicula, acá en servicios: ", error);
         throw error;
-        
+
       }
     },
 };
