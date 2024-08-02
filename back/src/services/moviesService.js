@@ -1,5 +1,7 @@
 const Movies = require("../models/Movies");
 
+
+
 module.exports = {
     getMovies: async () => {
       try {

@@ -13,14 +13,11 @@ const axios = require ("axios");
 //   }
 
   const obtenerDatosPeliculas = async () => {
-    return new Promise (async (resolve, reject) =>{
-
       try {
         const response = await axios.get("http://localhost:3000/posts/movies");
-        resolve(response.data);
+        return response.data;
       } catch (error) {
-        reject("Error al obtener los datos de las Peliculas: " + error.message);
+        throw new Error("Error al obtener los datos de las Peliculas: " + error.message);
       }
-    });
   };
   module.exports = obtenerDatosPeliculas;

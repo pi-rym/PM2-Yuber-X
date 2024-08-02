@@ -31,10 +31,7 @@ $(document).ready(function () {
           ShowDetail(element)
         }); 
       });
-    }
-
-
-    )
+    })
     .catch(error => {
       console.error("Error al obtener los datos", error);
     });
