@@ -86,7 +86,7 @@
 
     <section class="contenedor-form">     <!--FORMULARIO-->
       <div class="  contenedor texto-mont">   
-        <form action="">
+        <form id="formulario-pelicula" action="">
           <fieldset>
             <div class="contenedor-campos">
               
@@ -94,22 +94,22 @@
                 
                 <div class="campo">
                   <label class="label-tit">Titulo</label>
-                  <input name="Titulo" class="input-text" type="text" placeholder="Titulo" id="">
+                  <input name="Titulo"  type="text" placeholder="Titulo" id="title" required>
                 </div>
                 
                 <div class="campo">
                   <label class="label-tit">Año</label>
-                  <input type="number" name="Age" placeholder="Año" id="">
+                  <input type="number" name="Age" placeholder="Año" id="year" required>
                 </div>
     
                 <div class="campo">
                   <label class="label-tit">Descripción</label>
-                  <textarea name="descripcion" class="" placeholder="Descripción Aquí"></textarea>
+                  <textarea name="descripcion" placeholder="Descripción Aquí" id="description" required></textarea>
                 </div>
     
                 <div class="campo">
                   <label class="label-tit">Director</label>
-                  <input type="text" name="Director" class="" placeholder="Director">
+                  <input type="text" name="Director"  placeholder="Director" id="director" required>
                 </div>
 
               </div>
@@ -118,22 +118,22 @@
                 
                 <div class="campo">
                   <label class="label-tit">Duración</label>
-                  <input type="text" name="Duracion" class="" placeholder="Duracion de la Pelicula">
+                  <input type="text" name="Duracion"  placeholder="Duracion de la Pelicula" id="duration" required>
                 </div>
     
                 <div class="campo">
                   <label class="label-tit" >Genero</label>
-                  <input type="text" name="Genero" class="" placeholder="Genero">
+                  <input type="text" name="Genero"  placeholder="Genero (separado por comas)" id="genre" required>
                 </div>
     
                 <div class="campo">
                   <label class="label-tit">Rate</label>
-                  <input type="number" name="Rate" class="" placeholder="Rate">
+                  <input type="number" name="Rate"  placeholder="Calificación" step="0.1" id="rate" required>
                 </div>
     
                 <div class="campo">
                   <label class="label-tit">Poster</label>
-                  <input type="url" name="Poster" class="" placeholder="Enlace">
+                  <input type="url" name="Poster"  placeholder="Enlace" id="poster" required>
                 </div>
                 
               </div>

@@ -1,4 +1,5 @@
 const obtenerDatosPeliculas = require("../scripts/api");
+const formHandler = require("../scripts/formHandler");
 const agregarCardsAlHTML = require("../scripts/cards");
 const scrollNav = require("../scripts/scroll");
 const interval = require("../scripts/slider")
@@ -36,6 +37,29 @@ $(document).ready(function () {
       console.error("Error al obtener los datos", error);
     });
 
+    $("#form-create-movie").on("submit", async function(event){
+      event.preventDefault();
+
+      const movie = {
+        title: $("#title").val(),
+        year: $("#year").val(),
+        description: $("#description").val(),
+        director: $("#director").val(),
+        duration: $("#duration").val(),
+        genre: $("#genre").val().split(","),
+        rate: parseFloat($("#rate").val()),
+        poster: $("#poster").val(),
+      }
+      try{
+        const nuevaPelicula = await crearNuevaPelicula(movie);
+
+        agregarCardsAlHTML([nuevaPelicula]);
+
+        $(this)[0].reset();
+      } catch(error) {
+        console.error("Error al crear la nueva pelicula: ", error);
+      }
+    });
 });
 
 
