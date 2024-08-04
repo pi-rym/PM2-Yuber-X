@@ -79,14 +79,14 @@
       </div>
     </section>
 
-    <section id="peli-link" class="contenedor"> 
+    <section id="peli-link" class="contenedor"> <!--PELICULAS-->
     
     
     </section>
 
     <section class="contenedor-form">     <!--FORMULARIO-->
       <div class="  contenedor texto-mont">   
-        <form id="formulario-pelicula" action="">
+        <form id="form-create-movie" action="">
           <fieldset>
             <div class="contenedor-campos">
               
@@ -123,7 +123,7 @@
     
                 <div class="campo">
                   <label class="label-tit" >Genero</label>
-                  <input type="text" name="Genero"  placeholder="Genero (separado por comas)" id="genre" required>
+                  <input type="text" name="Genero"  placeholder="Genero (separado por ' , ')" id="genre" required>
                 </div>
     
                 <div class="campo">
@@ -141,11 +141,11 @@
               <div class="btn">
 
                 <div class="btn-enviar">
-                  <input type="button"  value="Enviar">
+                  <input type="submit"  value="Enviar">
                 </div>
   
                 <div class="btn-borrar">
-                  <input type="button"  value="Borrar">
+                  <input type="button" id="reset-form" value="Borrar">
                 </div>
 
               </div>

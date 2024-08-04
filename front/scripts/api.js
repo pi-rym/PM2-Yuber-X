@@ -25,10 +25,10 @@ const axios = require ("axios");
       }
   };
 
-  const crearNuevaPelicula = async (movieData) => {
+  const crearNuevaPelicula = async (movie) => {
     try {
 
-      const response = await axios.post("http://localhost:3000/posts/movies", movieData);
+      const response = await axios.post("http://localhost:3000/posts/movies", movie);
       return response.data;
 
     } catch (error) {
@@ -37,4 +37,4 @@ const axios = require ("axios");
     }
   };
 
-  module.exports =  obtenerDatosPeliculas, crearNuevaPelicula ;
+  module.exports =  {obtenerDatosPeliculas, crearNuevaPelicula};

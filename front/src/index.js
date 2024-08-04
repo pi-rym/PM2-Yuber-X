@@ -1,9 +1,10 @@
-const obtenerDatosPeliculas = require("../scripts/api");
+const {obtenerDatosPeliculas, crearNuevaPelicula}   = require("../scripts/api");
 const formHandler = require("../scripts/formHandler");
 const agregarCardsAlHTML = require("../scripts/cards");
-const scrollNav = require("../scripts/scroll");
-const interval = require("../scripts/slider")
-const tempData = require("../scripts/tempData");
+// const scrollNav = require("../scripts/scroll");
+// const interval = require("../scripts/slider")
+// const tempData = require("../scripts/tempData");
+
 
 
 /** Función para mostrar los detalles de la película **/
@@ -11,11 +12,11 @@ function mostrarDetalles(titulo, poster, genero) {
   // Actualiza los elementos en la card master con los datos de la película seleccionada
   $("#poster").attr("src", poster);
   $("#titulo").text(titulo);
-  $("#descripcion").text(tempData.find(tarjeta => tarjeta.title === titulo).description);
+  $("#descripcion").text(obtenerDatosPeliculas.find(tarjeta => tarjeta.title === titulo).description);
   $("#genero").text(genero);
-  $("#director").text(tempData.find(tarjeta => tarjeta.title === titulo).director + ', ');
-  $("#year").text(tempData.find(tarjeta => tarjeta.title === titulo).year);
-  $("#duracion").text(tempData.find(tarjeta => tarjeta.title === titulo).duration);
+  $("#director").text(obtenerDatosPeliculas.find(tarjeta => tarjeta.title === titulo).director + ', ');
+  $("#year").text(obtenerDatosPeliculas.find(tarjeta => tarjeta.title === titulo).year);
+  $("#duracion").text(obtenerDatosPeliculas.find(tarjeta => tarjeta.title === titulo).duration);
 }
 
 // Llama a la función para obtener los datos de las películas cuando la página esté lista
@@ -23,8 +24,8 @@ $(document).ready(function () {
   obtenerDatosPeliculas()
     .then(data => {
       agregarCardsAlHTML(data)
+      
 
-      scrollNav();
 
       const elements = document.getElementsByClassName("card-values");
       Array.from(elements).forEach((element) => {
@@ -37,9 +38,11 @@ $(document).ready(function () {
       console.error("Error al obtener los datos", error);
     });
 
+    //capturar evento al enviar 
     $("#form-create-movie").on("submit", async function(event){
       event.preventDefault();
 
+      //extraer datos del formulario
       const movie = {
         title: $("#title").val(),
         year: $("#year").val(),
@@ -53,12 +56,19 @@ $(document).ready(function () {
       try{
         const nuevaPelicula = await crearNuevaPelicula(movie);
 
+        //Actualizar la ui
         agregarCardsAlHTML([nuevaPelicula]);
 
+        //limpiar el formulario despues de enviar
         $(this)[0].reset();
       } catch(error) {
         console.error("Error al crear la nueva pelicula: ", error);
       }
+    });
+
+    //Boton para borrar 
+    $("#reset-form").on("click", function(){
+      $('#form-create-movie')[0].reset();
     });
 });
 

@@ -3,7 +3,7 @@ const { crearPelicula } = require("./api");
 
 
 
-document.getElementById('formulario-pelicula').addEventListener('submit', async (e) => {
+document.getElementById('form-create-movie').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const movieData = {
@@ -16,7 +16,7 @@ document.getElementById('formulario-pelicula').addEventListener('submit', async 
         genre: document.getElementById('genre').value.split(',').map(g => g.trim()),
         rate: parseFloat(document.getElementById('rate').value),
         poster: document.getElementById('poster').value
-        
+
     }
 
     try {

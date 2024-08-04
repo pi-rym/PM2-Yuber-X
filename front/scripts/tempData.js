@@ -89,4 +89,4 @@ const tarjetasData = [
     },
 ];
 
-module.exports = tarjetasData;
+
