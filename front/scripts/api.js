@@ -27,12 +27,23 @@ const axios = require ("axios");
 
   const crearNuevaPelicula = async (movie) => {
     try {
-
-      const response = await axios.post("http://localhost:3000/posts/movies", movie);
+      console.log(JSON.stringify(movie)); //convierte el objeto de javascript a JSON
+      //EJEMPLO:
+      // const value =  {
+      //   name : "Steven",
+      //   id: 1
+      // }
+      // JSON.stringify(value);
+      // output:
+      // {
+      //   "name"  : "Steven",
+      //   "id" : 1
+      // }
+      const response = await axios.post("http://localhost:3000/posts/movies",movie);
       return response.data;
 
     } catch (error) {
-      throw new Error("Error al crear la pelicula: " + error.message);
+      throw new Error("Error al crear la pelicula: " + error);
       
     }
   };

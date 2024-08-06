@@ -3,7 +3,7 @@ const { crearPelicula } = require("./api");
 
 
 
-document.getElementById('form-create-movie').addEventListener('submit', async (e) => {
+const formHandler = document.getElementById('form-create-movie').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const movieData = {
@@ -30,3 +30,5 @@ document.getElementById('form-create-movie').addEventListener('submit', async (e
 
     }
 })
+
+module.export = formHandler;

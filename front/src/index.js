@@ -1,11 +1,5 @@
 const {obtenerDatosPeliculas, crearNuevaPelicula}   = require("../scripts/api");
-const formHandler = require("../scripts/formHandler");
 const agregarCardsAlHTML = require("../scripts/cards");
-// const scrollNav = require("../scripts/scroll");
-// const interval = require("../scripts/slider")
-// const tempData = require("../scripts/tempData");
-
-
 
 /** Función para mostrar los detalles de la película **/
 function mostrarDetalles(titulo, poster, genero) {
@@ -25,8 +19,6 @@ $(document).ready(function () {
     .then(data => {
       agregarCardsAlHTML(data)
       
-
-
       const elements = document.getElementsByClassName("card-values");
       Array.from(elements).forEach((element) => {
         element.addEventListener("click", () => {
@@ -45,14 +37,15 @@ $(document).ready(function () {
       //extraer datos del formulario
       const movie = {
         title: $("#title").val(),
-        year: $("#year").val(),
+        year: Number($("#years").val()),
         description: $("#description").val(),
-        director: $("#director").val(),
+        director: $("#directors").val(),
         duration: $("#duration").val(),
         genre: $("#genre").val().split(","),
         rate: parseFloat($("#rate").val()),
-        poster: $("#poster").val(),
+        poster: $("#posters").val(),
       }
+
       try{
         const nuevaPelicula = await crearNuevaPelicula(movie);
 
@@ -72,7 +65,6 @@ $(document).ready(function () {
     });
 });
 
-
 const ShowDetail =(element)=>{
   const img = element.querySelector("img");
   const h5 = element.querySelector("h5");
@@ -88,6 +80,6 @@ const ShowDetail =(element)=>{
     const { titulo, poster, genero } = cardData;
     mostrarDetalles(titulo, poster, genero);
   } else {
-    console.error("No se encontraron elementos necesarios dentro del elemento clicado.");
+    console.error("No se encontraron elementos necesarios dentro del elemento clickcado.");
   }
 }

@@ -15,7 +15,7 @@ function generarCard(titulo, poster, genero) {
 
 /** Función para agregar las cards al contenedor en el HTML **/
 function agregarCardsAlHTML(data) {
-  const contenedor = $("#peli-link");
+    const contenedor = $("#peli-link");
   data.forEach((tarjeta) => {
     const cardHTML = generarCard(tarjeta.title, tarjeta.poster, tarjeta.genre);
     contenedor.append(cardHTML);

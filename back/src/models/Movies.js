@@ -8,7 +8,7 @@ const moviesSchema = new mongoose.Schema({
     director: String,
     duration: String,
     genre: [String],
-    rate: Number,
+    rate: Number ,
     poster: String,
 });
 
