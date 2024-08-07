@@ -2,15 +2,32 @@ const {obtenerDatosPeliculas, crearNuevaPelicula}   = require("../scripts/api");
 const agregarCardsAlHTML = require("../scripts/cards");
 
 /** Función para mostrar los detalles de la película **/
-function mostrarDetalles(titulo, poster, genero) {
-  // Actualiza los elementos en la card master con los datos de la película seleccionada
-  $("#poster").attr("src", poster);
-  $("#titulo").text(titulo);
-  $("#descripcion").text(obtenerDatosPeliculas.find(tarjeta => tarjeta.title === titulo).description);
-  $("#genero").text(genero);
-  $("#director").text(obtenerDatosPeliculas.find(tarjeta => tarjeta.title === titulo).director + ', ');
-  $("#year").text(obtenerDatosPeliculas.find(tarjeta => tarjeta.title === titulo).year);
-  $("#duracion").text(obtenerDatosPeliculas.find(tarjeta => tarjeta.title === titulo).duration);
+async function mostrarDetalles(titulo, poster, genero) { // se tuvo que poner un async ya que esta funcion ya no era para obtener datos de un array como anteriormente se hizo
+
+  try{
+    // Obteniendo los datos de "obtenerDatosPeliculas"
+    const obtenerPeliculas = await obtenerDatosPeliculas();
+    // Asegurandome de que sean las peliculas correctas
+    const pelicula = obtenerPeliculas.find(tarjeta => tarjeta.title === titulo);
+
+    if (pelicula) {
+      // Actualiza los elementos en la card master con los datos de la película seleccionada
+      $("#poster").attr("src", poster);
+      $("#titulo").text(titulo);
+      $("#descripcion").text(pelicula.description);
+      $("#genero").text(genero);
+      $("#director").text(pelicula.director + ', ');
+      $("#year").text(pelicula.year);
+      $("#duracion").text(pelicula.duration);
+      
+    } else {
+      console.error("Pelicula no Encontrada");
+    }
+
+  } catch (error){
+    console.error("Error al obtener los datos de la pelicula (acá en mostrarDetalles): ", error);
+  }
+
 }
 
 // Llama a la función para obtener los datos de las películas cuando la página esté lista
